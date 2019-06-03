@@ -1,6 +1,6 @@
 [[source]]
 name = "pypi"
-url =  "https://mirrors.aliyun.com/pypi/simple"
+url =  "https://pypi.douban.com/simple"
 verify_ssl = true
 
 [dev-packages]
@@ -8,6 +8,9 @@ verify_ssl = true
 [packages]
 numpy = "==1.16.3"
 matplotlib = "*"
+scikit-learn = "*"
+pandas = "*"
+openpyxl = "*"
 
 [requires]
 python_version = "3.7"
