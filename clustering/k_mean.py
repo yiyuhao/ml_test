@@ -32,14 +32,14 @@ for row in origin_data_list:
     duration /= event
     hour_0_6 /= event
     hour_11_17 /= event
-    data_list.append([event, lv, duration, day_span, day_count, hour_0_6, hour_11_17])
+    data_list.append([lv, day_span, hour_0_6])
 
 # to ndarray
 data = np.array(data_list)
 
 normalized_data = normalize(data)
 
-k_means = KMeans(n_clusters=5)
+k_means = KMeans(n_clusters=2)
 
 predicted_result = k_means.fit_predict(normalized_data)  # [9 8 0 0 0 0 7 4 0 ... 0]
 
