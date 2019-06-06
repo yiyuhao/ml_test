@@ -58,6 +58,9 @@ def select_work_or_home_by_le_num(fence_list):
 
         if p_working == 0:
             home_fence = more_proper_fence(home_fence, (f, c))
+        elif p_home == 0:
+            work_fence = more_proper_fence(work_fence, (f, c))
+
         elif p_home / p_working > 1:
             home_fence = more_proper_fence(home_fence, (f, c))
         elif p_working / p_home > 1:
